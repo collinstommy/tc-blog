@@ -257,5 +257,5 @@ With that being said I think the improved readability, ease of debugging and mor
 You may argue that having to add a class to all your elements is a drawback. In my expierence when there are mutliple elements with the same class, this is often done programatically or via a CMS. If you have a list of elements that you need to continually add to mnaually, that is a separate issue that likely should be automated in some way.
 
 ## An after word
-I believe much of the above also applies to the overuse if `*` `>` `+` selectors. Of course these have their place, but should not be relied upon when a simple class would do the job. Using a variety of selectors in your code makes developers reading your code have to constantly compute what there selectors are doing. Often the bets solution is the simplest one. 
+I believe much of the above also applies to the overuse if `*` `>` `+` selectors. Of course these have their place, but should not be relied upon when a simple class would do the job. Using a variety of selectors in your code makes developers reading your code have to constantly compute what there selectors are doing. Often the best solution is the simplest one. 
 
