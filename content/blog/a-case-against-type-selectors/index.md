@@ -1,6 +1,6 @@
 ---
-title: A Case Against Element Selectors
-date: "2015-05-01T22:12:03.284Z"
+title: A Case Against Type Selectors
+date: "2019-04-15T22:12:03.284Z"
 ---
 I’ve been contemplating the use of type selectors in CSS recently. Below are largely opinions and I welcome comments or corrections on the topic.
 
@@ -67,8 +67,8 @@ After adding some content I decide that some of my articles need avatars. I want
 		<img sr="myimage" alt="image" />
 	</article>
 	<article>
-		<h2>We're launching our new site</h2>
-		<p>Check it out for lots of new content</p>
+			<h2>I'm a different article</h2>
+      <p>but I need some avatars</p>
 		<div class="news__row">
 			<img sr="myimage" alt="image" />
 			<img sr="myimage" alt="image" />	
@@ -250,7 +250,6 @@ Of course the above example is somewhat contrived. Even type selectors nested a 
 Of course with anything there’s potential drawbacks. 
 - Using BEM notation you may find yourself using a number of long class names: `.news__article--main`, .`news__cta--primary`
 - You are now required to add a classname to your new elements `<img class=“featured-image />`
-- Your CSS bundle size has increased
 
 With that being said I think the improved readability, ease of debugging and more robust nature of class selectors outweigh these drawbacks.
 

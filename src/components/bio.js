@@ -38,7 +38,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in Dublin building webpages and online tools for HubSpot.
+              I'm <strong>{author}</strong> a Web Developer based Dublin. I build web pages and online tools for HubSpot.
               {` `}
             </p>
           </div>
