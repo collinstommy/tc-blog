@@ -10,6 +10,24 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-plugin-sass`,
+          {
+            resolve: `gatsby-plugin-prefetch-google-fonts`,
+            options: {
+              fonts: [
+                {
+                  family: `Droid Serif`,
+                },
+                {
+                  family: `Yanone Kaffeesatz`
+                },
+                {
+                  family: `Ubuntu Mono`,
+                  variants: [`400`, `700`, `400i`]
+                },
+              ],
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
