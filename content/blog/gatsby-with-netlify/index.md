@@ -82,15 +82,16 @@ plugins: [
 ## Deploy
 1.  https://tcollins.dev/gatsby-with-netlify/
 
-[![Deploy starter blog to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-statuskit)
+[![Deploy starter blog to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
 2. Download your repo and install
 ```
-git clone https://github.com/collinstommy/gatsby-starter-blog.git
+npm install -g gatsby-cli
+git clone https://github.com/{userName}/gatsby-starter-blog.git
 cd gatsby-starter-blog/
 npm i
 vscode .
-npm run develop
+gatsby develop
 ```
 
 3. Create a page - add file under `pages`
@@ -108,7 +109,5 @@ git add .
 git commit -m "my first page"
 git push origin master
 ```
-5. Go back to site to view deploy
-
-6. Deployed site: https://optimistic-swirles-6d249a.netlify.com/portfolio/
+5. Go back to netlify site to view deploy
 
