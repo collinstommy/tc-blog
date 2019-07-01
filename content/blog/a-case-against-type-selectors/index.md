@@ -4,11 +4,11 @@ date: "2019-04-15T22:12:03.284Z"
 ---
 I’ve been contemplating the use of type selectors in CSS recently. Below are largely opinions and I welcome comments or corrections on the topic.
 
-So lets dig into the issue at hand, type selectors in CSS. 
+So let's dig into the issue at hand, type selectors in CSS. 
 
-A common use case for type selectors is for enforcing site wide styles. This allows you to keep things on brand by setting properties such as color, font-size and spacing.
+A common use case for type selectors is for enforcing site-wide styles. This allows you to keep things on brand by setting properties such as color, font-size, and spacing.
 
-Lets take an example. You create some styles for your site.
+Let's take an example. You create some styles for our site.
 ```css
 
 h1, h2, p {
@@ -29,7 +29,7 @@ p {
 }
 ```
 
-So now we have some base styles for our elements. We want to build out some pages.  Lets start with a news section. This will have some images and text.
+So now we have some base styles for our elements. We want to build out some pages. Let's start with a news section. This will have some images and text.
 
 ```html
 <section class="news">
@@ -92,7 +92,7 @@ After adding some content I decide that some of my articles need avatars. I want
 
 I load up my webpage. Here is where the problems start. My images have inherited this extra padding. This padding made sense for my initial design of one image per news update.  It has broken my avatar design where I don’t want this spacing.
 
-I could of course fix this by overriding the styles, increasing the specificity:
+I could, of course, fix this by overriding the styles, increasing the specificity:
 ```scss
 	.news {
 		&__row {
@@ -109,7 +109,7 @@ This is not ideal as each time I add a different child element that has an image
 ## Breaking future designs
 For each new case where I need different `img` styles in my news section, I am required to override the padding. The default I have imposed on this section only works for my initial use case. My initial use case was not a good candidate for element type styling. It was too specific and was more suited to class selectors. 
 
-By using classes I can ensure that I am being intentional when styling my elements. Aside from my site wide typography styles, my elements will only be styled by the classes I assign to them.
+By using classes I can ensure that I am being intentional when styling my elements. Aside from my site-wide typography styles, my elements will only be styled by the classes I assign to them.
 
 Take note of the `.news__avatar` selector.
 ```scss
@@ -147,12 +147,12 @@ Take note of the `.news__avatar` selector.
 </section>
 ```
 
-By moving to using classes and BEM notation:
+By moving to use classes and BEM notation:
 - I’m being more intentional in the styles that I apply to the elements
 - When reading my markup I can see where my elements are getting styles from
 - I can now search my code base for `__avatar`. I’m helping some other poor developer who has to deal with my code
 
-Another advantages is that my elements are styled like components. As they follow a BEM notation, moving these to reusable components is an easier task:
+Another advantage is that my elements are styled like components. As they follow a BEM notation, moving these to reusable components is an easier task:
 ```jsx
 	const NewsItem = ({ heading, text, imageUrl }) => (<article>
 		<h2>{heading}</h2>
@@ -162,7 +162,7 @@ Another advantages is that my elements are styled like components. As they follo
 ```
 My feature image no longer relies on being within `.news` and being an `img` tag.
 
-This leads into another disadvantage of type selector styling:
+This leads to another disadvantage of type selector styling:
 
 ## Reliance on element types
 By tying styles to an element type I am introducing the need to change CSS if I need to add these styles to another element. Using my old element styling the following markup will require a change in CSS
@@ -186,7 +186,7 @@ By associating my styles with a class selector I can apply this to different ele
 </article>
 ```
 
-Lets take another use case. I have a  `span` I use in my web app. Its a simple back button that triggers some javascript. I style this by using a type selector:
+Let's take another use case. I have a  `span` I use in my web app. It's a simple back button that triggers some javascript. I style this by using a type selector:
 ```html
 <section class="news">
 	<span>Back</span>
@@ -228,11 +228,11 @@ section {
 
 There are a number of issues with this. Due to the nested structure altering my DOM will break my design. Having these nested elements create a tight coupling between my styles and my DOM structure. A change in one will likely require a change in the other.
 
-Overuse of this pattern leads to difficulty in debugging. Looking at markup without classes makes finding the applicable CSS difficult. It also requires a developer deal with specificity issues. In the future if I refactor this CSS to be part of a reusable component, there can be unintended consequence for child element in the DOM  tree that match these elements.
+Overuse of this pattern leads to difficulty in debugging. Looking at markup without classes makes finding the applicable CSS difficult. It also requires a developer deal with specificity issues. In the future, if I refactor this CSS to be part of a reusable component, there can be an unintended consequence for child element in the DOM  tree that match these elements.
 
-Of course the above example is somewhat contrived. Even type selectors nested a single level deep can have unintended consequence for future markup.
+Of course, the above example is somewhat contrived. Even type selectors nested a single level deep can have an unintended consequence for future markup.
 
-## In summary avoid overuse of type seletors:
+## In summary, avoid overuse of type selectors:
 - Styles are bound to specific element types
 - It can lead to breaking semantic markup in order to achieve a specific design e.g. `<h3> <h2>` in the wrong order
 - Changing the DOM structure can break a design
@@ -243,18 +243,18 @@ Of course the above example is somewhat contrived. Even type selectors nested a 
 ## So what’s the solution
 - Lean into class names. Be intentional with your styling. There are many tools that can help you avoid names clashes in CSS such as CSS Modules, BEM, styled-components etc, 
 - Use type selectors for their intended purpose, for applying styles globally to keep a consistent look and feel.
-- HTML tags are for used to semantically structure your page. A `h1` should indicate the purpose of your page.  A `p` should contain some long form text. You should apply the styles using classes.
+- HTML tags are for used to semantically structure your page. A `h1` should indicate the purpose of your page.  A `p` should contain some long-form text. You should apply the styles using classes.
 - Create classes to reuse styles. Have a `.h1` , `.h2`, `big-image`. 
 
 ## Are there cons?
-Of course with anything there’s potential drawbacks. 
+Of course, as with anything, there are potential drawbacks. 
 - Using BEM notation you may find yourself using a number of long class names: `.news__article--main`, .`news__cta--primary`
-- You are now required to add a classname to your new elements `<img class=“featured-image />`
+- You are now required to add a class to your new elements `<img class=“featured-image />`
 
 With that being said I think the improved readability, ease of debugging and more robust nature of class selectors outweigh these drawbacks.
 
-You may argue that having to add a class to all your elements is a drawback. In my expierence when there are mutliple elements with the same class, this is often done programatically or via a CMS. If you have a list of elements that you need to continually add to manually, that is a separate issue that likely should be automated in some way.
+You may argue that having to add a class to all your elements is a drawback. In my experience when there are multiple elements with the same class, this is often done programmatically or via a CMS. If you have a list of elements that you need to continually add to manually, that is a separate issue that likely should be automated in some way.
 
-## An after word
-I believe much of the above also applies to the overuse if `*` `>` `+` selectors. Of course these have their place, but should not be relied upon when a simple class would do the job. Using a variety of selectors in your code makes developers reading your code have to constantly compute what these selectors are doing. Often the best solution is the simplest one. 
+## An Afterword
+I believe much of the above also applies to the overuse if `*` `>` `+` selectors. Of course, these have their place, but should not be relied upon when a simple class would do the job. Using a variety of selectors in your code makes developers reading your code have to constantly compute what these selectors are doing. Often the best solution is the simplest one. 
 
