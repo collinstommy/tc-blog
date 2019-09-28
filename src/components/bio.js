@@ -38,7 +38,7 @@ function Bio() {
               }}
             />
             <p>
-              I'm <strong>{author}</strong> a Web Developer based Dublin. I build web pages and online tools for HubSpot.
+              I'm <strong>{author}</strong> a Web Developer based Dublin. I build web pages and online tools for HubSpot. Find me on <a href="https://www.linkedin.com/in/thomas-collins-327b0016/">LinkedIn</a>.
               {` `}
             </p>
           </div>
