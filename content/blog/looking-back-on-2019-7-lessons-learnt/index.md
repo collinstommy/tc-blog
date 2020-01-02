@@ -18,6 +18,11 @@ If you are Junior, ask more questions. Learn as much as you can in this early pa
 If you are Senior, ask more questions. You may not know as much as you think and you can always learn more. Challenge your assumptions and learn from your team.
 
 If you are a Jedi Developer/Coding Savant, ask more questions. This will encourage more junior members to ask more questions. Discussions you start will help you, and others around you, learn.
+
+![Alt Text](https://thepracticaldev.s3.amazonaws.com/i/pjamx290s7ijeg0qs0il.jpeg)
+
+![Alt Text](https://thepracticaldev.s3.amazonaws.com/i/tmhgivnjznq3hadd0t36.png)
+
 ### 3. Writing good code is only part of it
 Clean performant code is only one piece of the puzzle. A huge part of successfully writing software is coordinating people. Having a great process around how you develop and deploy software is crucial. Motivating a team of developers will impact code quality. Organizing and coordinating a group of developers to write code in a scalable way is the cornerstone of the entire process.
 
