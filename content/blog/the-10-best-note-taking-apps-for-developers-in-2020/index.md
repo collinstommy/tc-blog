@@ -19,7 +19,7 @@ Some of the things I use these apps for are: taking meeting notes, organizing my
 In no particular order here are the best note-taking apps in 2020:
 
 
-### 1. Evernote
+### 1. [Evernote](https://evernote.com/)
 
 **Platforms**: Mac, Windows, Linux, Mobile, Web
 
@@ -31,7 +31,7 @@ While Evernote has a solid feature set and great cross-platform support, it fall
 
 **Summary:** Evernote is a solid choice if you can forgo markdown support. For non-developers, it’s a strong note-taking solution.
 
-### 2. Typora
+### 2. [Typora](https://www.typora.io/)
 **Platforms:** Windows, macOS, Linux
 
 Typora is a minimalist note-taking app available for desktop only. The inline editor is beautiful. Of all the note-taking apps I’ve tried this has one of the strongest editors. It has support for tables, various font families and nested unordered lists. Markdown works great in this editor, with a very seamless experience.
@@ -40,7 +40,7 @@ Sticking with the minimal approach, Typora allows you to organize notes using fo
 
 **Summary:** One of the best editors on the list. A minimalist approach is taken to organizing notes.
 
-### 3. OneNote
+### 3. [OneNote](https://www.onenote.com/)
 **Platforms:** Windows, macOS, Mobile, Web
 
 Microsoft OneNote is a feature-rich note-taking app. It uses a similar system to Evernote for organizing notes, with notebooks being the main mechanism. OneNote does also allow you to create sub-pages though. More recent versions do have custom tags, though the UI for this is clunky.
@@ -51,7 +51,7 @@ Like Evernote, a big drawback is the lack of markdown support and the plethora o
 
 **Summary:** A feature-rich to-do app with no markdown support. Windows users will be at home with OneNote.
 
-### 4. Bear
+### 4. [Bear](https://bear.app/)
 **Platforms:** iOS, macOS
 
 Bear is a beautifully crafted note-taking app. It features a fantastic inline text editor, with good markdown support. The current version of Bear is missing a few markdown features, such as tables and full support for indented lists.
@@ -67,7 +67,7 @@ The editor, while excellent does not have the flexibility of Notion or Slite.
 **Summary:** A beautiful UI, fantastic text editor, and best in class tagging system make this a great choice for Apple users.
 
 
-### 5. Notion
+### 5. [Notion](https://bear.app/)
 **Platforms:** Mac, Windows, Mobile, Web
 
 The functionality of Notion goes far beyond note-taking. Its feature set boasts pages, databases, wikis, templates, todo, and boards. It offers a huge amount of flexibility and customization. Templates leverage this flexibility and provide examples of how to create pages for specific tasks. Examples of templates include a recipe book, a Kanban board or a CRM.
@@ -82,7 +82,7 @@ The fact that Notion themselves use the app for their support docs and release d
 
 **Summary:** A do-it-all note-taking app that is strong in most areas with strong cross-platform support.
 
-### 6. Boost Note
+### 6. [Boost Note](https://boostnote.io/)
 **Platforms:** Windows, Mac, Linux, Web
 
 Boostnote is an open-source note-taking app built for developers. It uses a straightforward side by side editor. It has good markdown support which includes tables, lists and code blocks. 
@@ -93,7 +93,7 @@ Boost Note is pretty strong when it comes to organization. It allows you to tag 
 
 **Summary:** A note-taking app with a basic editor and good organization. 
 
-### 7. Notable
+### 7. [Notable](https://notable.md/)
 **Platforms:** Windows, Mac, Linux
 
 Notable is very similar to Boost Notes. It has a side-by-side editor, markdown support and tags. It does outshine Boost Note on two features, its text editor and its tagging system. Nested tags are supported in Notable, a big plus on the organizational front. Its text editor has better markdown support and is easier to use than Boost Notes.
@@ -104,7 +104,7 @@ There is no mobile or web version at this time.
 
 **Summary:** A free no-frills note-taking app for desktop with tagging and markdown support.
 
-### 8. DropBox Paper
+### 8. [DropBox Paper](https://www.dropbox.com/paper)
 **Platforms:** Web
 
 Dropbox paper provides a great online note-taking experience. It has good markdown support and a fantastic inline editor. It allows teams to collaborate on notes with features such as commenting, todo, and sharing. The organization of notes is pretty bare bones. You can create folders and subfolders and that’s it.
@@ -113,7 +113,7 @@ Dropbox paper is currently only available on the Web; meaning that, internet acc
 
 **Summary:** A nice online note-taking app with good collaboration tools.
 
-### 9. Slite
+### 9. [Slite](https://slite.com/)
 **Platforms:** Windows, Mac, Mobile, Web
 
 Slide bills itself as a collaboration tool and note-taking app all in one. It features a beautiful UI and excellent text editor. The drag and drop functionality and markdown support make this one of the strongest editors on the list.
@@ -124,7 +124,7 @@ Slite uses the concept of channels for organizing notes. The side menu that allo
 
 **Summary:** Slite is a great option for teams and organizations who want to share notes and create wikis. It has one of the strongest text editors and a beautiful UI.
 
-### 10. StackEdit
+### 10. [StackEdit](https://stackedit.io/)
 **Platforms:** Web
 
 StackEdit is a straightforward markdown editor that concentrates on integrating with platforms such as Google Drive, Dropbox, and GitHub. 
