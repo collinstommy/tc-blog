@@ -157,6 +157,8 @@ I’m a huge fan of Bear. Its note-taking experience is great and its tagging is
 - Quiver
 - Simple Note
 - Joplin
+- TiddlyWiki
+- Cherry Tree
 
 ## Closing thoughts
 With so many options for note-taking apps and so many features available there is a good chance that I missed out on some features. I will gladly update any of the points above to fix inaccuracies.
