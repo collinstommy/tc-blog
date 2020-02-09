@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/election2020"
+  to = "/election-2020"
+  status = 301
+  force = false
