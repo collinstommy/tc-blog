@@ -47,6 +47,7 @@ const sendResult = (dbConfig, query) => {
 ```
 
 **Good:**
+
 Documenting high level functions using something like JSDoc is an ideal use case for comments.
 ```js
 /**
@@ -77,6 +78,7 @@ if (user.result < 40 || user.attendance < 50) {
 
 
 **Good:**
+
 Assigning new variables to store the results of a statement allows readers of your code to get on with the story.  A reader of your code is trying to find the piece that they are concerned with. Help them follow the story so they can fix the bug or add that piece of functionality. This story will have co-authors.
 
 ```js
@@ -107,6 +109,7 @@ if (user.result < 40 || user.attendance < 50) {
 
 
 **Good:**
+
 Passing in an object can be a great solution here. 
 
 ```js
@@ -124,7 +127,9 @@ if (userPassedCourse) {
 
 
 **Also Good:**
+
 You could make your story more expressive by creating some new functions.
+
 ```js
 const sendEmail = ({ user, passedCourse }) => { }
 
@@ -195,7 +200,6 @@ getResultsFromDB({ entity: 'undergrad', courseId: 'SCIENCE_101'})
 Better yet, use typescript to enforce type safety.
 
 ### 6.  Favor verbosity over brevity
-
 Don’t confuse your readers. Our code should be dry, concise and clean but our function names don’t need to be restricted by length.
 
 **Bad:**
