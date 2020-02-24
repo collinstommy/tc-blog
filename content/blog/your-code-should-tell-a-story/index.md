@@ -1,9 +1,8 @@
 ---
-title: "Your code should tell a story: Tips to writing code for others to read"
+title: "Your code should tell a story: Tips for writing code for others to read"
 date: "2020-02-21"
 ---
 
-When we write code we do so to solve a problem.
 When we write code, we are also writing a story for other developers.
 
 Here are a few tips on how we can write code for our future selves and other developers (our readers).
@@ -26,6 +25,7 @@ const sendResult = (dbConfig, query) => {
   sendEmail(html);
 }
 ```
+<br />
 
 Create extra functions to explain your code. Needing to add a comment should be a call to action to either create a new variable or a new function. Smaller functions are easier to test and lead to dryer code.
 
