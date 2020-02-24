@@ -25,11 +25,9 @@ const sendResult = (dbConfig, query) => {
   sendEmail(html);
 }
 ```
-<br />
-
+**Good:**
 Create extra functions to explain your code. Needing to add a comment should be a call to action to either create a new variable or a new function. Smaller functions are easier to test and lead to dryer code.
 
-**Good:**
 ```js
 const getStudentResults = (dbConfig, query) => {
   const dbConnection = getConnection(dbConfig);
@@ -46,6 +44,17 @@ const sendResult = (dbConfig, query) => {
   const resuls = getStudentResults(dbConfig, query);
   emailResultse(resuls);
 }
+```
+
+**Good:**
+Documenting high level functions using something like JSDoc is an ideal use case for comments.
+```js
+/**
+ * Get student results from the Database
+ * @param {object} dbConfig - Config for connecting to the db
+ * @param {string} query - Query for the database
+ */
+const getStudentResults = (dbConfig, query) => { }
 
 ```
 
@@ -66,9 +75,10 @@ if (user.result < 40 || user.attendance < 50) {
 }
 ```
 
-Assigning new variables to store the results of a statement allows readers of your code to get on with the story.  A reader of your code is trying to find the piece they are concerned with. Help them follow the story so they can fix the bug or add that piece of functionality. This story will have co-authors.
 
 **Good:**
+Assigning new variables to store the results of a statement allows readers of your code to get on with the story.  A reader of your code is trying to find the piece that they are concerned with. Help them follow the story so they can fix the bug or add that piece of functionality. This story will have co-authors.
+
 ```js
 const user = getStduentResults(4309394);
 const userPassedCourse = user.result < 40 || user.attendance < 50;
@@ -95,9 +105,10 @@ if (user.result < 40 || user.attendance < 50) {
 }
 ```
 
-Passing in an object can be a great solution here. 
 
 **Good:**
+Passing in an object can be a great solution here. 
+
 ```js
 const sendEmail = ({ user, passedCourse }) => { }
 
@@ -111,9 +122,9 @@ if (userPassedCourse) {
 }
 ```
 
-You could make your story more expressive by creating some new functions:
 
 **Also Good:**
+You could make your story more expressive by creating some new functions.
 ```js
 const sendEmail = ({ user, passedCourse }) => { }
 
@@ -159,9 +170,33 @@ const fieldsOfStudy = {
 const students = getStudents(courseId, fieldsOfStudy.ENGINEERING);
 ```
 
-### 5.  Favor verbosity over brevity
+### 5. Use enums. Avoid using strings as identifiers.
+In the same vain as magic numbers, using strings as indentifier can lead to confusion in your story. Having ids in strings can lead to ambiguity. Refactoring these strings will be more difficult.
 
-Don’t confuse your readers. Our code should be dry, concise and clean but our function names don’t need to be retrained.
+**Bad:**
+```js
+getResults({ entity: 'undergrad', courseId: 'SCIENCE_101'});
+
+// Elsewhere in the code
+getResults({ entity: 'undergrad', courseId: 'SCIENCE_101'});
+getResults({ entity: 'undergrad', courseId: 'SCIENCE_100'});
+
+```
+
+**Good:**
+```js
+const entity = {
+  UNDERGRAD: 'underGrad',
+  POSTGRAD: 'postGrad',
+}
+
+getResultsFromDB({ entity: 'undergrad', courseId: 'SCIENCE_101'})
+```
+Better yet, use typescript to enforce type safety.
+
+### 6.  Favor verbosity over brevity
+
+Don’t confuse your readers. Our code should be dry, concise and clean but our function names don’t need to be restricted by length.
 
 **Bad:**
 ```js
@@ -173,3 +208,5 @@ const results = getResults();
 const examResults = getStudentExamResults();
 ```
 
+What tips do you have?
+Would love to see some code snippets in the comments.
