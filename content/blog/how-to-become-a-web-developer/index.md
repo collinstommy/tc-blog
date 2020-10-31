@@ -3,7 +3,7 @@ title: "How to become a Web Developer"
 date: "2020-10-31"
 ---
 
-Over the years I've gotten questions by a number friends on how to get started as a Web Developer. I've put together all the links and advice I've shared, and created this post.
+Over the years I've gotten questions from a number friends on how to get started as a Web Developer. I've put together all the links and advice I've shared, and created this post.
 
 If you want to just get stuck in go to [https://www.freecodecamp.org/](https://www.freecodecamp.org/) and off you go. If you want to know more read on.
 
